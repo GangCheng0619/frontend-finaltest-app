@@ -1,38 +1,371 @@
 .App {
   text-align: center;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Font Part */
+
+h2 {
+  font-weight: 900 !important;
+  padding: 16px 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-weight: 900;
+  padding: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h6 {
+  color: black;
+}
+
+.x-font-coinname {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.x-font-transaction {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+
+.x-font-colored {
+  color: #0052cc;
+}
+
+/* Header Part */
+
+.x-header {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  padding: 30px 30px 10px;
+  border-bottom: solid 1px #dfdfdf;
+}
+
+.x-header-menubar {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
+}
+
+.x-header-menubar-item {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.x-header-menubar-item:hover {
+  background-color: #dfdfdf;
+}
+
+/* Body Part */
+
+.x-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 70px;
+}
+
+.x-font-small {
+  font-size: 15px;
+}
+
+.x-font-smallest {
+  font-size: 13px;
+}
+
+/* Section1 Part */
+
+.x-network-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 50px;
+}
+
+.x-network-section-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.x-network-section-balance-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 32px 0 32px;
+}
+
+.x-network-section-cardline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.x-network-section-card-outline {
+  padding: 0 3% 0 0;
+}
+
+.x-network-section-card {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+  border-radius: 4px;
+  padding: 25px 20px;
+  border: 1px solid #dfdfdf;
+  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.x-network-section-card-netname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.x-network-section-card-netbalance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.x-network-section-card-netbalance-third {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.x-network-section-card-operation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.x-network-section-card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.x-network-section-card-btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Section2 Part */
+
+.x-transactions-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.x-transactions-section-content {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.x-transactions-section-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.x-transactions-section-content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 5vw;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+  background-color: white;
+}
+
+.x-transactions-section-content-box-complex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 5px;
+}
+
+.x-transactions-section-content-box-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b6f2b2;
+  background-color: #f3fcf3;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Modal Section */
+
+.s-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.s-modal-main {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: white;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.s-modal-header {
+  margin: 30px 30px 0px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.s-modal-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.s-modal-close {
+  cursor: pointer;
+}
+
+.s-modal-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px 0px 30px;
+}
+
+.s-modal-qr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+}
+
+.s-modal-address-title {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.s-modal-content {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.s-modal-address {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.s-modal-copy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #00a5ef;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.s-modal-footer {
+  margin-top: 30px;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.s-modal-footer-content {
+  margin: 30px;
+}
+
+.s-modal-font-weight-700 {
+  font-weight: 700;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 1184px) {
+  .x-network-section-cardline {
+    grid-gap: 10px;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 425px) {
+  .x-transactions-section-content-header {
+    display: none;
+  }
+
+  .x-network-section-card-netname {
+    flex-direction: column;
+  }
+
+  .x-network-section-balance {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .x-network-section-balance-amount {
+    padding: 16px 0;
+  }
+
+  .x-transactions-section-content-box-complex {
+    flex-direction: row;
+  }
+
+  .x-transactions-section-content-box {
+    justify-content: center;
+  }
+
+  .x-network-section-card-operation {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .x-network-section-card-btn {
+    width: 100%;
+  }
+
+  .x-network-section-card-btn2 {
+    width: 100%;
+  }
+
+  .s-modal-main {
+    width: 320px;
   }
 }
